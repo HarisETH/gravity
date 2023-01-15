@@ -1,8 +1,25 @@
+// React Imports
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+
+
+// Component Imports
+
+import Editor from '@/components/Editor'
+
+
+//API Imports
+
+      //CodeMirror
+
+import CodeMirror from '@uiw/react-codemirror'
+
+
+
 
 export default function Home() {
   return (
@@ -13,9 +30,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className='bg-black min-h-screen'>
-        <p className='bg-black text-white h-screen w-full'>lorem</p>
-      </section>
+      <main className='flex flex-col items-center justify-start pt-10 h-screen w-full  '>
+        
+        <Editor />
+      </main>
     </>
   )
 }
+
+// installed codemirror base, themes, languages
