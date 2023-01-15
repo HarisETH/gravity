@@ -1,4 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
+*{
+    font-family: 'Jetbrains Mono';
+}
+div.cm-gutters{
+    background-color: transparent !important;
+}
+.cm-gutter.cm-lineNumbers{
+    display: none !important;
+    background-color: transparent !important;
+}
+div.cm-activeLine{
+    background-color: transparent !important;
+}
+.cm-gutter.cm-lineNumbers.lineActive{
+    display: flex !important;
+    background-color: transparent !important;
+
+}
+
+.cm-editor{
+    border-radius: 10px !important;
+    padding: 20px 10px;
+
+}
+.cm-activeLineGutter{
+    background-color: transparent;
+}
+.cm-gutter.cm-foldGutter{
+    display: none !important;
+}

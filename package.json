@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@next/font": "13.1.2",
+    "@uiw/codemirror-extensions-events": "^4.19.6",
     "@uiw/codemirror-extensions-langs": "^4.19.6",
     "@uiw/codemirror-themes-all": "^4.19.6",
     "@uiw/react-codemirror": "^4.19.6",
+    "codemirror": "^6.0.1",
+    "html2canvas": "^1.4.1",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
