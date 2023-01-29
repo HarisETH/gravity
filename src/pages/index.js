@@ -27,7 +27,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='flex flex-col items-center justify-start pt-10 h-screen w-full  '>
+      <main className='flex bg-gray-900 flex-col items-center justify-start pt-10 h-screen w-full  '>
         
         <Editor />
       </main>

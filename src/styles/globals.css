@@ -22,14 +22,23 @@ div.cm-activeLine{
 
 }
 
-.cm-editor{
-    border-radius: 10px !important;
-    padding: 20px 10px;
 
-}
 .cm-activeLineGutter{
     background-color: transparent;
 }
 .cm-gutter.cm-foldGutter{
     display: none !important;
+}
+.cm-activeLineGutter{
+    background-color: transparent !important;
+}
+
+
+.editorExportClass{
+    border-radius: 10px !important;
+}
+.cm-editor{
+    border-radius: 10px !important;
+    padding: 20px 10px;
+
 }
