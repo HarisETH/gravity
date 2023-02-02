@@ -64,7 +64,7 @@ console.log(editorClass)
       <div className=" border-black resize rounded-md w-min p-10 bg-black" id="capture" ref={exportContent}>
         <CodeMirror
         
-          className="editor-box caret-transparent focus:caret-inherit"
+          className="editor-box caret-transparent outline-none select-none pointer-events-none"
           value="console.log('hello world!');"
           extensions={[javascript({ jsx: true })]}
           theme={editorTheme}

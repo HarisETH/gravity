@@ -40,5 +40,7 @@ div.cm-activeLine{
 .cm-editor{
     border-radius: 10px !important;
     padding: 20px 10px;
-
+    caret-color: transparent !important;
+    caret: transparent !important;
+    outline: none !important;
 }
