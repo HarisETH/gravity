@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 *{
-    font-family: 'Jetbrains Mono';
+    font-family: 'Jetbrains Mono', monospace;
 }
 div.cm-gutters{
     background-color: transparent !important;
