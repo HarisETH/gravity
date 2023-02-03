@@ -32,7 +32,7 @@ const Editor = () => {
   //html2image function
   const handleClick = () => {
     console.log(exportComponent);
-    htmlToImage.toPixelData(exportComponent, {quality: 1,  skipAutoScale:true}).then(function (dataUrl) {
+    htmlToImage.toPng(exportComponent, {quality: 1,  skipAutoScale:true}).then(function (dataUrl) {
       download(dataUrl, "reffer.png");
     });
 
