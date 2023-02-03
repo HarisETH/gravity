@@ -17,6 +17,19 @@ A sleek light code image exporter in just a click with many themes, languages bu
 [  ] More Functionalities (once added it will be mentioned here )
 
 Built by [Haris⚡]('https://www.haris.one')
+## Recent Commits
+
+- Added ANT design system
+- Improved UI and Responsiveness in mobile devices
+- Added Background gradient feature 
+
+## Upcoming  Feature Updates
+
+- UI will be Improved
+- More theme and language support
+- 
+
+
 ## 🔗 Let's Connect via
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://haris.one/)
 
