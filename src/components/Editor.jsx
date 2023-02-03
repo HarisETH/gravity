@@ -53,12 +53,12 @@ const Editor = () => {
         <button onClick={() => setEditorTheme(githubDark)}>Default</button>
       </div>
       <div
-        className=" border-black resize rounded-md w-min p-10 gradient-cover-one max-w-4xl"
+        className=" border-black flex items-center justify-center rounded-md m-10 p-0 w-min gradient-cover-one max-w-3xl resize-x overflow-auto"
         id="capture"
         ref={exportContent}
       >
         <CodeMirror
-          className="editor-box p-10  outline-none select-none min-w-ful w-max max-w-xl"
+          className="editor-box p-10 outline-none select-none w-max  text-sm "
           value="console.log('hello world!');"
           extensions={
             [javascript({ jsx: true }),
