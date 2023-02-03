@@ -1,8 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import CodeMirror from "@uiw/react-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
-import { githubDark } from "@uiw/codemirror-themes-all";
-import { dracula } from "@uiw/codemirror-themes-all";
+
+
 import download from "downloadjs";
 import * as htmlToImage from "html-to-image";
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
@@ -17,8 +16,16 @@ import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space, Typography } from "antd";
 
 //themes
+import { githubDark } from "@uiw/codemirror-themes-all";
+import { dracula } from "@uiw/codemirror-themes-all";
+
 
 //languages
+import { javascript } from "@codemirror/lang-javascript";
+
+
+
+
 
 const Editor = () => {
   const exportContent = useRef();
@@ -67,13 +74,14 @@ const Editor = () => {
   const items = [
     {
       key: "1",
-      label: (
-        <button onClick={() => setEditorTheme(dracula)}>Dark theme</button>
-      ),
+      label: (<button onClick={() => setEditorTheme(githubDark)}>Default</button>),
+      
     },
     {
       key: "2",
-      label: "Item 2",
+      label: (
+        <button onClick={() => setEditorTheme(dracula)}>Dracula</button>
+      ),
     },
     {
       key: "3",
@@ -97,10 +105,10 @@ const Editor = () => {
           menu={{
             items,
             selectable: true,
-            defaultSelectedKeys: ["3"],
+            defaultSelectedKeys: ["1"],
           }}
         >
-          <button>Themes -3 </button>
+          <button>Themes</button>
         </Dropdown>
       </div>
       <Space wrap>
@@ -113,7 +121,7 @@ const Editor = () => {
         </Button>
       </Space>
       <div
-        className=" border-black flex items-center justify-center rounded-md p-0 w-min gradient-cover-one max-w-full resize-x overflow-auto"
+        className=" border-black flex items-center justify-center rounded-lg p-0 w-min gradient-cover-one max-w-full resize-x overflow-auto"
         id="capture"
         ref={exportContent}
       >
