@@ -6,7 +6,7 @@ import Image from "next/image";
 // Component Imports
 
 import Editor from "@/components/Editor";
-
+import Header from "@/components/Header";
 //API Imports
 
 //CodeMirror
@@ -31,8 +31,11 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <main className="flex bg-gray-900 flex-col items-center justify-start pt-10 min-h-screen w-full  ">
+      <main className="flex bg-gray-100 flex-col items-center justify-start pt-16 min-h-screen w-full  ">
+        <Header />
+
         <Editor />
+
       </main>
     </>
   );

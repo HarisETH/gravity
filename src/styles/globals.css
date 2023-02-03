@@ -89,3 +89,12 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B429F9", en
     width: 50px !important;
     height: 100px !important;
 } */
+
+
+.text-gradient{
+    background: #00FF00;
+background: linear-gradient(to bottom right, #00FF00 0%, #00FFFF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
