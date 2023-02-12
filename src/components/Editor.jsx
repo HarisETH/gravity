@@ -8,10 +8,6 @@ import { EditorView } from "codemirror";
 
 // Design System Components
 
-// import { Checkbox } from "antd";
-// import { Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-import { Space, Typography } from "antd";
 
 import { Navbar, Button, Link, Text } from "@nextui-org/react";
 import { Checkbox } from "@nextui-org/react";
@@ -20,6 +16,9 @@ import { Dropdown } from "@nextui-org/react";
 //themes
 import { githubDark } from "@uiw/codemirror-themes-all";
 import { dracula } from "@uiw/codemirror-themes-all";
+import { githubLight } from "@uiw/codemirror-themes-all";
+import { tokyoNight } from "@uiw/codemirror-themes-all";
+import { vscodeDark } from "@uiw/codemirror-themes-all";
 
 //languages
 import { javascript } from "@codemirror/lang-javascript";
@@ -31,7 +30,6 @@ const Editor = () => {
 
   const [editorTheme, setEditorTheme] = useState(githubDark);
   const [editorClass, setEditorClass] = useState();
-  console.log(editorClass);
 
   const [selected, setSelected] = React.useState(new Set(["Github Dark"]));
 
@@ -96,6 +94,8 @@ const Editor = () => {
         </Dropdown>
       </div> */}
       <Navbar isBordered variant="floating" className="w-full">
+
+
         <Navbar.Content hideIn="xs" variant="highlight-rounded">
           <Checkbox
             size="sm"
@@ -106,9 +106,13 @@ const Editor = () => {
           </Checkbox>
 
           <Dropdown>
+
+            {/* 1 */}
             <Dropdown.Button flat color="secondary" css={{ tt: "capitalize" }}>
               {selectedValue}
             </Dropdown.Button>
+
+            {/* 2 */}
             <Dropdown.Menu
               aria-label="Single selection actions"
               color="secondary"
@@ -117,33 +121,80 @@ const Editor = () => {
               selectedKeys={selected}
               onSelectionChange={setSelected}
             >
+              {/*  */}
               <Dropdown.Item key="Github Dark">
                 <Button
-                  onClick={() => setEditorTheme(githubDark)}
+                  onPress={() => setEditorTheme(githubDark)}
                   light
-                  color="primary"
+                  color="secondary"
                   auto
                 >
                   Github Dark{" "}
                 </Button>
               </Dropdown.Item>
+              {/*  */}
+
               <Dropdown.Item key="dracula">
                 <Button
-                  onClick={() => setEditorTheme(dracula)}
+                  onPress={() => setEditorTheme(dracula)}
                   light
-                  color="primary"
+                  color="secondary"
                   auto
                 >
                   Dracula{" "}
                 </Button>
               </Dropdown.Item>
+
+              <Dropdown.Item key="Tokyo Night">
+                <Button
+                  onPress={() => setEditorTheme(tokyoNight)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Tokyo Night{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="Github Light">
+                <Button
+                  onPress={() => setEditorTheme(githubLight)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Github Light{" "}
+                </Button>
+              </Dropdown.Item>
+
+
+              <Dropdown.Item key="VS Code Dark">
+                <Button
+                  onPress={() => setEditorTheme(vscodeDark)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  VS Code Dark{" "}
+                </Button>
+              </Dropdown.Item>
+
               
             </Dropdown.Menu>
+{/* githubLight
+tokyoNight
+vscodeDark */}
+
+
           </Dropdown>
 
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Company</Navbar.Link>
+          {/*  */}
+
+          
+
+          
         </Navbar.Content>
+
         <Navbar.Content>
           <Navbar.Link color="inherit" href="#">
             Login
@@ -156,15 +207,6 @@ const Editor = () => {
         </Navbar.Content>
       </Navbar>
 
-      <Space wrap>
-        <Button
-          onClick={handleClick}
-          type="primary"
-          className="text-white bg-blue-600"
-        >
-          Export Code
-        </Button>
-      </Space>
       <div
         className=" border-black flex items-center justify-center rounded-lg p-0 w-min gradient-cover-one max-w-full resize-x overflow-auto"
         id="capture"
@@ -178,6 +220,12 @@ const Editor = () => {
           lineWrapping={true}
         />
       </div>
+
+      <Button onClick={handleClick} shadow color="gradient" >
+        Export Code
+      </Button>
+
+      
     </section>
   );
 };

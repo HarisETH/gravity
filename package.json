@@ -15,7 +15,6 @@
     "@uiw/codemirror-extensions-langs": "^4.19.6",
     "@uiw/codemirror-themes-all": "^4.19.6",
     "@uiw/react-codemirror": "^4.19.6",
-    "antd": "^5.1.7",
     "codemirror": "^6.0.1",
     "dom-to-image": "^2.6.0",
     "downloadjs": "^1.4.7",
