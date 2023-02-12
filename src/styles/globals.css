@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
-*{
+*, .jetbrain{
     font-family: 'Jetbrains Mono', monospace;
 }
 #capture{
@@ -24,7 +24,9 @@ div.cm-activeLine{
     background-color: transparent !important;
 
 }
-
+.cm-content{
+    opacity: 1 !important;
+}
 
 .cm-activeLineGutter{
     background-color: transparent;
@@ -52,12 +54,19 @@ div.cm-activeLine{
     white-space: pre-wrap !important;
     word-break: break-word !important;
     width: fit-content;
+   
     
 }
+.cm-gutters{
+    border: 0 !important ;
+    margin-right: 5px;
+}
+
 .cm-line{
     word-break: break-all !important;
     word-wrap: break-word !important;
     overflow: visible !important;
+    opacity: 1 !important;
 }
 .gradient-cover-one{
     background: hsla(280, 95%, 57%, 1);
@@ -130,3 +139,4 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EA98DA", en
       background-position: 0% 50%;
     }
   }
+

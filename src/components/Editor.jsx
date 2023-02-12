@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import CodeMirror from "@uiw/react-codemirror";
-
+import * as Icon from 'react-feather';
 import download from "downloadjs";
 import * as htmlToImage from "html-to-image";
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
@@ -12,6 +12,11 @@ import { EditorView } from "codemirror";
 import { Navbar, Button, Link, Text } from "@nextui-org/react";
 import { Checkbox } from "@nextui-org/react";
 import { Dropdown } from "@nextui-org/react";
+import { Radio } from "@nextui-org/react";
+import { Switch, Grid } from "@nextui-org/react";
+
+
+
 
 //themes
 import { githubDark } from "@uiw/codemirror-themes-all";
@@ -77,14 +82,18 @@ const Editor = () => {
       <Navbar isBordered variant="floating" className="w-full">
 
 
-        <Navbar.Content hideIn="xs" variant="highlight-rounded">
-          <Checkbox
-            size="sm"
+        <Navbar.Content hideIn="xs" variant="highlight-rounded" >
+          <p className="text-sm self-center font-medium text-purple-600 jetbrain mr-2">Lines</p>
+          <Switch
+            size="xs"
             onChange={() => setLineStatus(!lineStatus)}
-            className="text-white text-base"
+            className="text-white text-base shadow-lg"
+            label="Lines"
+            shadow
+            color="secondary"
           >
-            Lines
-          </Checkbox>
+            
+          </Switch>
 
           <Dropdown>
 
@@ -169,6 +178,22 @@ vscodeDark */}
 
           </Dropdown>
 
+          {/* <Radio.Group orientation="horizontal"  defaultValue="1" size="xs">
+      <Radio value="1" isSquared>
+        Option 1
+      </Radio>
+      <Radio value="2" isSquared>
+        Option 2
+      </Radio>
+      <Radio value="3" isSquared>
+        Option 3
+      </Radio>
+      <Radio value="4" isSquared>
+        Option 4
+      </Radio>
+    </Radio.Group> */}
+
+
           {/*  */}
 
           
@@ -177,9 +202,41 @@ vscodeDark */}
         </Navbar.Content>
 
         <Navbar.Content>
-          <Navbar.Link color="inherit" href="#">
-            Login
-          </Navbar.Link>
+
+         <Dropdown>
+
+         <Dropdown.Button color="secondary" className="bg-purple-600 p-0.5 px-2.5" auto shadow>
+          <Icon.Settings color="white" className=""/>
+          </Dropdown.Button>  
+
+          <Dropdown.Menu aria-label="Static Actions" className="w-full" isVirtualized>
+        <Dropdown.Item key="padding">
+
+        <Radio.Group orientation="vertical" defaultValue="1" size="xs">
+      <Radio value="1" isSquared>
+        Option 1
+      </Radio>
+      <Radio value="2" isSquared>
+        Option 2
+      </Radio>
+      <Radio value="3" isSquared>
+        Option 3
+      </Radio>
+      <Radio value="4" isSquared>
+        Option 4
+      </Radio>
+    </Radio.Group>
+
+        </Dropdown.Item>
+        <Dropdown.Item key="copy">Copy link</Dropdown.Item>
+        <Dropdown.Item key="edit">Edit file</Dropdown.Item>
+        <Dropdown.Item key="delete" color="error">
+          Delete file
+        </Dropdown.Item>
+      </Dropdown.Menu>
+
+
+          </Dropdown>      
 
           <Navbar.Item className="p-0 w-fit">
           <Button onPress={handleClick} className="bg-purple-600 p-0.5 px-4" shadow color="secondary" auto>
@@ -191,12 +248,12 @@ vscodeDark */}
       </Navbar>
 
       <div
-        className=" border-black flex items-center justify-center rounded-lg p-0 w-min gradient-cover-one max-w-full resize-x overflow-auto"
+        className=" border-black flex items-center justify-center rounded-lg p-0 w-min gradient-cover-one max-w-full  overflow-auto"
         id="capture"
         ref={exportContent}
       >
         <CodeMirror
-          className="editor-box p-10 outline-none select-none w-max max-h-fit text-xs max-w-full"
+          className="editor-box p-10 outline-none select-none w-max  max-h-fit text-xs max-w-full"
           value="console.log('hello world!');"
           extensions={[javascript({ jsx: true }), EditorView.lineWrapping]}
           theme={editorTheme}
