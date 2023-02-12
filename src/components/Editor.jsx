@@ -39,6 +39,11 @@ const Editor = () => {
     [selected]
   );
 
+
+
+  //padding function
+
+  const [bgPadding, setbgPadding] = useState("")
   //html2image function
   const handleClick = () => {
     console.log(exportComponent);
