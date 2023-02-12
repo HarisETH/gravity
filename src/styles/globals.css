@@ -1,4 +1,4 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
@@ -92,16 +92,30 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B429F9", en
 
 
 .text-gradient{
-    background: #00FF00;
-background: linear-gradient(to bottom right, #00FF00 0%, #00FFFF 100%);
+    background: hsla(312, 66%, 76%, 1);
+
+background: linear-gradient(315deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
+
+background: -moz-linear-gradient(315deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
+
+background: -webkit-linear-gradient(315deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EA98DA", endColorstr="#5B6CF9", GradientType=1 );
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 
 }
 
 .gradient-background {
-    background: linear-gradient(210deg,deepskyblue,#5906ef);
-    background-size: 120% 120%;
+    background: hsla(277, 79%, 84%, 1);
+
+    background: linear-gradient(225deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
+    
+    background: -moz-linear-gradient(225deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
+    
+    background: -webkit-linear-gradient(225deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#DDB4F6", endColorstr="#8DD0FC", GradientType=1 );
     animation: gradient-animation 10s ease infinite;
   }
   

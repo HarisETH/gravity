@@ -73,26 +73,7 @@ const Editor = () => {
 
   return (
     <section className="w-full px-4 flex flex-col gap-4 justify-center items-center py-20">
-      {/* <div className="toolbar bg-gray-900 p-2 text-white rounded-md flex gap-10">
-        <Checkbox
-          onChange={() => setLineStatus(!lineStatus)}
-          className="text-white"
-        >
-          Lines
-        </Checkbox>
-        <button onClick={() => setEditorTheme(dracula)}>Dark theme</button>
-        <button onClick={() => setEditorTheme("light")}>Light theme</button>
-        <button onClick={() => setEditorTheme(githubDark)}>Default</button>
-        <Dropdown
-          menu={{
-            items,
-            selectable: true,
-            defaultSelectedKeys: ["1"],
-          }}
-        >
-          <button>Themes</button>
-        </Dropdown>
-      </div> */}
+      
       <Navbar isBordered variant="floating" className="w-full">
 
 
@@ -108,7 +89,7 @@ const Editor = () => {
           <Dropdown>
 
             {/* 1 */}
-            <Dropdown.Button flat color="secondary" css={{ tt: "capitalize" }}>
+            <Dropdown.Button flat color="secondary" css={{ tt: "capitalize" }} className="bg-transparent">
               {selectedValue}
             </Dropdown.Button>
 
@@ -199,11 +180,13 @@ vscodeDark */}
           <Navbar.Link color="inherit" href="#">
             Login
           </Navbar.Link>
-          <Navbar.Item>
-            <Button auto flat as={Link} href="#">
-              Sign Up
-            </Button>
+
+          <Navbar.Item className="p-0 w-fit">
+          <Button onPress={handleClick} className="bg-purple-600 p-0.5 px-4" shadow color="secondary" auto>
+        Export
+      </Button>
           </Navbar.Item>
+
         </Navbar.Content>
       </Navbar>
 
@@ -221,9 +204,7 @@ vscodeDark */}
         />
       </div>
 
-      <Button onClick={handleClick} shadow color="gradient" >
-        Export Code
-      </Button>
+      
 
       
     </section>
