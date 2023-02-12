@@ -98,3 +98,21 @@ background: linear-gradient(to bottom right, #00FF00 0%, #00FFFF 100%);
 -webkit-text-fill-color: transparent;
 
 }
+
+.gradient-background {
+    background: linear-gradient(210deg,deepskyblue,#5906ef);
+    background-size: 120% 120%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

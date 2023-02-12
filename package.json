@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.2",
+    "@nextui-org/react": "^1.0.0-beta.12",
     "@uiw/codemirror-extensions-events": "^4.19.6",
     "@uiw/codemirror-extensions-langs": "^4.19.6",
     "@uiw/codemirror-themes-all": "^4.19.6",

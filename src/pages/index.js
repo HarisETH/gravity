@@ -31,7 +31,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <main className="flex bg-gray-100 flex-col items-center justify-start pt-16 min-h-screen w-full  ">
+      <main className="flex bg-gray-100 flex-col items-center justify-start gradient-background pt-16 min-h-screen w-full  ">
         <Header />
 
         <Editor />
