@@ -36,6 +36,11 @@ export default function Home() {
 
         <Editor />
 
+
+        <div className="absolute bottom-20 right-20 ">
+        
+        </div>
+
       </main>
     </>
   );
