@@ -21,7 +21,7 @@ Built by [Haris⚡]('https://www.haris.one')
 
 - Added NEXTUI design system
 - Improved UI and Responsiveness in mobile devices
-- Added four⁴ more editor themes
+- Added more⁵ editor themes
 
 ## Upcoming  Feature Updates
 
