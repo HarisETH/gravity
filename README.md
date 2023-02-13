@@ -8,7 +8,7 @@ A sleek light code image exporter in just a click with many themes, languages bu
 
 ## Roadmap
 
-[ x ] Basic Code export with JS support and basic themes
+- [x] Basic Code export with JS support and basic themes
 
 [  ] Adding more language compatiblity and themes 
 
