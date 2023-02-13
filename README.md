@@ -10,24 +10,24 @@ A sleek light code image exporter in just a click with many themes, languages bu
 
 - [x] Basic Code export with JS support and basic themes
 
-[  ] Adding more language compatiblity and themes 
+- [] Adding more language compatiblity and themes 
 
-[  ] UI Improvements
+- [] UI Improvements
 
-[  ] More Functionalities (once added it will be mentioned here )
+- [] More Functionalities (once added it will be mentioned here )
 
 Built by [Haris⚡]('https://www.haris.one')
 ## Recent Commits
 
-- Added ANT design system
+- Added NEXTUI design system
 - Improved UI and Responsiveness in mobile devices
-- Added Background gradient feature 
+- Added four⁴ more editor themes
 
 ## Upcoming  Feature Updates
 
 - UI will be Improved
 - More theme and language support
-- 
+- Padding adjustment option
 
 
 ## 🔗 Let's Connect via
