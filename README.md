@@ -10,11 +10,11 @@ A sleek light code image exporter in just a click with many themes, languages bu
 
 - [x] Basic Code export with JS support and basic themes
 
-- [] Adding more language compatiblity and themes 
+- [ ] Adding more language compatiblity and themes 
 
-- [] UI Improvements
+- [ ] UI Improvements
 
-- [] More Functionalities (once added it will be mentioned here )
+- [ ] More Functionalities (once added it will be mentioned here )
 
 Built by [Haris⚡]('https://www.haris.one')
 ## Recent Commits
