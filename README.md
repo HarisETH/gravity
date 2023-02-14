@@ -6,7 +6,7 @@ A sleek light code image exporter in just a click with many themes, languages bu
 
 
 
-## Roadmap
+## 🛣 Roadmap
 
 - [x] Basic Code export with JS support and basic themes
 
@@ -17,13 +17,13 @@ A sleek light code image exporter in just a click with many themes, languages bu
 - [ ] More Functionalities (once added it will be mentioned here )
 
 Built by [Haris⚡]('https://www.haris.one')
-## Recent Commits
+## ➕️ Recent Commits
 
 - Added NEXTUI design system
 - Improved UI and Responsiveness in mobile devices
 - Added more⁵ editor themes
 
-## Upcoming  Feature Updates
+## 🦄 Upcoming  Feature Updates
 
 - UI will be Improved
 - More theme and language support
