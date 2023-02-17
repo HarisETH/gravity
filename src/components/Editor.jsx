@@ -21,6 +21,13 @@ import { githubLight } from "@uiw/codemirror-themes-all";
 import { tokyoNight } from "@uiw/codemirror-themes-all";
 import { vscodeDark } from "@uiw/codemirror-themes-all";
 
+import { nord } from "@uiw/codemirror-themes-all";
+import { duotone } from "@uiw/codemirror-themes-all";
+import { sublime } from "@uiw/codemirror-themes-all";
+import { androidstudio } from "@uiw/codemirror-themes-all";
+import { aura } from "@uiw/codemirror-themes-all";
+import { abcdef } from "@uiw/codemirror-themes-all";
+
 //languages
 import { javascript } from "@codemirror/lang-javascript";
 
@@ -32,18 +39,37 @@ const Editor = () => {
   const [editorTheme, setEditorTheme] = useState(githubDark);
   const [editorClass, setEditorClass] = useState();
 
-  const [selected, setSelected] = React.useState(new Set(["Github Dark"]));
+  const [selected, setSelected] = useState(new Set(["Github Dark"]));
 
-  const selectedValue = React.useMemo(
+  const selectedValue = useMemo(
     () => Array.from(selected).join(", ").replaceAll("_", " "),
     [selected]
   );
+
+  // Dropdown Array
+  const [checked, setChecked] = useState('8');
+
+
+  const menuItems = [
+    { key: "Github_Dark", name: "Github Dark", mainword: githubDark },
+    { key: "dracula", name: "dracula", mainword: dracula },
+    { key: "tokyoNight", name: "Tokyo Night", mainword: tokyoNight },
+    { key: "ABCDEF", name: "ABCDEF", mainword: abcdef },
+    { key: "Aura", name: "Aura", mainword: aura },
+    { key: "Android Studio", name: "Android Studio", mainword: androidstudio },
+    { key: "Sublime", name: "Sublime", mainword: sublime },
+    { key: "Duotone", name: "Duotone", mainword: duotone },
+    { key: "Nord", name: "Nord", mainword: nord },
+    { key: "VS Code Dark", name: "VS Code Dark", mainword: vscodeDark },
+    { key: "Github Light", name: "Github Light", mainword: githubLight },
+    
+  ];
 
 
 
   //padding function
 
-  const [bgPadding, setbgPadding] = useState("")
+ 
   //html2image function
   const handleClick = () => {
     console.log(exportComponent);
@@ -110,69 +136,42 @@ const Editor = () => {
               color="secondary"
               disallowEmptySelection
               selectionMode="single"
+              items={menuItems}
               selectedKeys={selected}
               onSelectionChange={setSelected}
             >
+                           
+
+
               {/*  */}
-              <Dropdown.Item key="Github Dark">
-                <Button
-                  onPress={() => setEditorTheme(githubDark)}
+              
+              {(item) => (
+                <Dropdown.Item key={item.key}>
+                  <Button onPress={() => {
+                    setEditorTheme(item.mainword)
+                    console.log(item.mainword)
+                  }}
                   light
                   color="secondary"
-                  auto
-                >
-                  Github Dark{" "}
-                </Button>
-              </Dropdown.Item>
-              {/*  */}
+                  auto>{item.name}</Button>
+                </Dropdown.Item>
+              )}
 
-              <Dropdown.Item key="dracula">
-                <Button
-                  onPress={() => setEditorTheme(dracula)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Dracula{" "}
-                </Button>
-              </Dropdown.Item>
 
-              <Dropdown.Item key="Tokyo Night">
-                <Button
-                  onPress={() => setEditorTheme(tokyoNight)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Tokyo Night{" "}
-                </Button>
-              </Dropdown.Item>
 
-              <Dropdown.Item key="Github Light">
-                <Button
-                  onPress={() => setEditorTheme(githubLight)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Github Light{" "}
-                </Button>
-              </Dropdown.Item>
 
-              <Dropdown.Item key="VS Code Dark">
-                <Button
-                  onPress={() => setEditorTheme(vscodeDark)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  VS Code Dark{" "}
-                </Button>
-              </Dropdown.Item>
+
             </Dropdown.Menu>
             {/* githubLight
 tokyoNight
-vscodeDark */}
+vscodeDark
+
+nord
+duotone
+sublime
+androidstudio
+aura
+abcdef */}
           </Dropdown>
 
           
@@ -194,13 +193,15 @@ vscodeDark */}
             className="text-sm flex items-end"
             orientation="vertical"
             label="Padding"
-            defaultValue="A"
+            value={checked}
+            onChange={setChecked}
+            defaultValue="8"
             size="xs"
           >
-            <Radio value="A">16</Radio>
-            <Radio value="B">32</Radio>
-            <Radio value="C">48</Radio>
-            <Radio value="D">64</Radio>
+            <Radio value="8">8</Radio>
+            <Radio value="16">16</Radio>
+            <Radio value="24">24</Radio>
+            <Radio value="32">32</Radio>
           </Radio.Group>
             </Popover.Content>
           </Popover>
@@ -220,12 +221,20 @@ vscodeDark */}
       </Navbar>
 
       <div
-        className=" border-black flex items-center justify-center rounded-lg p-0 w-min gradient-cover-one max-w-full  overflow-auto"
+        className={`border-black flex flex-col items-center p-10 justify-center rounded-lg p-${checked} w-min gradient-cover-one max-w-full  overflow-auto`}
         id="capture"
         ref={exportContent}
       >
+        <div className="w-full h-8 rounded-t-lg navtitle flex items-center px-2 relative">
+          <div className="buttons-title flex items-center gap-1 ">
+          <div className="h-2 w-2 bg-gray-200 opacity-20  rounded-full"></div>
+          <div className="h-2 w-2 bg-gray-200 opacity-20   rounded-full"></div>
+          <div className="h-2 w-2 bg-gray-200 opacity-20   rounded-full"></div>
+          </div>
+          <p contentEditable spellCheck="false" className="text-white opacity-40 text-xs text-center outline-none absolute w-full jetbrain">Untitled.code</p>
+        </div>
         <CodeMirror
-          className="editor-box p-10 outline-none select-none w-max  max-h-fit text-xs max-w-full"
+          className={`editor-box outline-none select-none w-max  max-h-fit text-xs max-w-full  `}
           value="console.log('hello world!');"
           extensions={[javascript({ jsx: true }), EditorView.lineWrapping]}
           theme={editorTheme}

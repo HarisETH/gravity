@@ -8,7 +8,7 @@ import Image from "next/image";
 import Editor from "@/components/Editor";
 import Header from "@/components/Header";
 //API Imports
-
+import { Button, Spacer } from "@nextui-org/react";
 //CodeMirror
 
 import CodeMirror from "@uiw/react-codemirror";
@@ -37,7 +37,7 @@ export default function Home() {
         <Editor />
 
 
-        <div className="absolute bottom-20 right-20 ">
+        <div className="absolute bottom-6 right-6 ">
         
         </div>
 

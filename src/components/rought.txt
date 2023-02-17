@@ -1,0 +1,109 @@
+<Dropdown.Item key="Github Dark">
+                <Button
+                  onPress={() => setEditorTheme(githubDark)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Github Dark{" "}
+                </Button>
+              </Dropdown.Item>
+              {/*  */}
+
+              <Dropdown.Item key="dracula">
+                <Button
+                  onPress={() => setEditorTheme(dracula)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Dracula{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="Tokyo Night">
+                <Button
+                  onPress={() => setEditorTheme(tokyoNight)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Tokyo Night{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="Github Light">
+                <Button
+                  onPress={() => setEditorTheme(githubLight)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Github Light{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="nord">
+                <Button
+                  onPress={() => setEditorTheme(nord)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  nord{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="duotone">
+                <Button
+                  onPress={() => setEditorTheme(duotone)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  duotone{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="sublime">
+                <Button
+                  onPress={() => setEditorTheme(sublime)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  sublime{" "}
+                </Button>
+              </Dropdown.Item>
+
+              <Dropdown.Item key="androidstudio">
+                <Button
+                  onPress={() => setEditorTheme(androidstudio)}
+                  light
+                  color="secondary"
+                  auto
+                >
+androidstudio                </Button>
+              </Dropdown.Item>
+              
+              <Dropdown.Item key="ABCDEF">
+                <Button
+                  onPress={() => setEditorTheme(abcdef)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  ABCDEF{" "}
+                </Button>
+              </Dropdown.Item>
+              
+              <Dropdown.Item key="Aura">
+                <Button
+                  onPress={() => setEditorTheme(aura)}
+                  light
+                  color="secondary"
+                  auto
+                >
+                  Aura{" "}
+                </Button>
+              </Dropdown.Item>
