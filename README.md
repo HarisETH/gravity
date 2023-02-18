@@ -21,7 +21,7 @@ Built by [Haris⚡]('https://www.haris.one')
 
 - Added NEXTUI design system
 - Improved UI and Responsiveness in mobile devices
-- Added more⁰ editor themes
+- Added more¹⁰ editor themes
 
 ## 🦄 Upcoming  Feature Updates
 
@@ -33,6 +33,10 @@ Built by [Haris⚡]('https://www.haris.one')
 
 - Added .io.day domain 
 - Added .is-an.app domain 
+
+## 👀 Live Project Peek
+
+Checkout the live project here : [Gravity.io.day](https://gravity.io.day) or [Gravity.is-an.app](https://gravity.is-an.app)
 
 
 ## 🔗 Let's Connect via
