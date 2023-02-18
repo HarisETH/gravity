@@ -21,13 +21,18 @@ Built by [Haris⚡]('https://www.haris.one')
 
 - Added NEXTUI design system
 - Improved UI and Responsiveness in mobile devices
-- Added more⁵ editor themes
+- Added more⁰ editor themes
 
 ## 🦄 Upcoming  Feature Updates
 
 - UI will be Improved
 - More theme and language support
 - Padding adjustment option
+
+## 🎉 Recent Milestones
+
+- Added .io.day domain 
+- Added .is-an.app domain 
 
 
 ## 🔗 Let's Connect via
