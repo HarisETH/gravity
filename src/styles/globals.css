@@ -111,44 +111,33 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 .text-gradient{
-    background: hsla(312, 66%, 76%, 1);
+    background: hsla(4, 93%, 67%, 1);
 
-background: linear-gradient(315deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
-
-background: -moz-linear-gradient(315deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
-
-background: -webkit-linear-gradient(315deg, hsla(312, 66%, 76%, 1) 0%, hsla(234, 93%, 67%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EA98DA", endColorstr="#5B6CF9", GradientType=1 );
+    background: linear-gradient(150deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
+    
+    background: -moz-linear-gradient(150deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
+    
+    background: -webkit-linear-gradient(150deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9655B", endColorstr="#EE821A", GradientType=1 );
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 
 }
 
 .gradient-background {
-    background: hsla(277, 79%, 84%, 1);
+    background: hsla(4, 48%, 94%, 1);
 
-    background: linear-gradient(225deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
+    background: linear-gradient(60deg, hsla(4, 48%, 94%, 1) 0%, hsla(66, 70%, 80%, 1) 50%, hsla(226, 67%, 76%, 1) 100%);
     
-    background: -moz-linear-gradient(225deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
+    background: -moz-linear-gradient(60deg, hsla(4, 48%, 94%, 1) 0%, hsla(66, 70%, 80%, 1) 50%, hsla(226, 67%, 76%, 1) 100%);
     
-    background: -webkit-linear-gradient(225deg, hsla(277, 79%, 84%, 1) 0%, hsla(204, 95%, 77%, 1) 100%);
+    background: -webkit-linear-gradient(60deg, hsla(4, 48%, 94%, 1) 0%, hsla(66, 70%, 80%, 1) 50%, hsla(226, 67%, 76%, 1) 100%);
     
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#DDB4F6", endColorstr="#8DD0FC", GradientType=1 );
-    animation: gradient-animation 10s ease infinite;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7E9E8", endColorstr="#E9F0AA", GradientType=1 );
   }
   
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+
 
 .gradient-modern{
     background: hsla(39, 51%, 85%, 1);
