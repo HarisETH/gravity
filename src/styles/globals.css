@@ -63,7 +63,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     word-break: break-word !important;
     width: fit-content;
     /* background-color: aquamarine ; */
-    background: rgba( 21, 17, 17, 0.69 );
+    /* background: rgba( 21, 17, 17, 0.69 ); */
 
 backdrop-filter: blur( 20px );
 -webkit-backdrop-filter: blur( 20px );
@@ -88,17 +88,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     opacity: 1 !important;
     padding: 0 2px !important;
 }
-.gradient-cover-one{
-    background: hsla(280, 95%, 57%, 1);
 
-background: linear-gradient(180deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-
-background: -moz-linear-gradient(180deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-
-background: -webkit-linear-gradient(180deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B429F9", endColorstr="#26C5F3", GradientType=1 );
-}
 .cm-scroller{
     overflow-x: hidden !important;
     /* white-space: pre-wrap !important; */
@@ -160,3 +150,26 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EA98DA", en
     }
   }
 
+.gradient-modern{
+    background: hsla(39, 51%, 85%, 1);
+
+background: linear-gradient(45deg, hsla(39, 51%, 85%, 1) 0%, hsla(182, 93%, 68%, 1) 50%, hsla(318, 79%, 79%, 1) 100%);
+
+background: -moz-linear-gradient(45deg, hsla(39, 51%, 85%, 1) 0%, hsla(182, 93%, 68%, 1) 50%, hsla(318, 79%, 79%, 1) 100%);
+
+background: -webkit-linear-gradient(45deg, hsla(39, 51%, 85%, 1) 0%, hsla(182, 93%, 68%, 1) 50%, hsla(318, 79%, 79%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ECDEC4", endColorstr="#62F4F9", GradientType=1 );
+}
+
+.gradient-aqua{
+    background: hsla(280, 95%, 57%, 1);
+
+background: linear-gradient(45deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+
+background: -moz-linear-gradient(45deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+
+background: -webkit-linear-gradient(45deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B429F9", endColorstr="#26C5F3", GradientType=1 );
+}

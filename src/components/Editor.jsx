@@ -47,8 +47,8 @@ const Editor = () => {
   );
 
   // Dropdown Array
-  const [checked, setChecked] = useState('8');
-
+  const [checked, setChecked] = useState("8");
+  const [bgGradientTheme, setbgGradientTheme] = useState('modern')
 
   const menuItems = [
     { key: "Github_Dark", name: "Github Dark", mainword: githubDark },
@@ -62,14 +62,10 @@ const Editor = () => {
     { key: "Nord", name: "Nord", mainword: nord },
     { key: "VS Code Dark", name: "VS Code Dark", mainword: vscodeDark },
     { key: "Github Light", name: "Github Light", mainword: githubLight },
-    
   ];
-
-
 
   //padding function
 
- 
   //html2image function
   const handleClick = () => {
     console.log(exportComponent);
@@ -86,6 +82,10 @@ const Editor = () => {
     let exportComp = document.getElementById("capture");
     setExComp(exportComp);
 
+    if (editorTheme === "githubLight") {
+      document.getElementsByClassName("cm-editor").style.background = "#fff";
+    }
+
     // console.log(editorExportClass);
     setEditorClass(editorExportClass[0]);
     const lineNumberElementOne =
@@ -99,7 +99,7 @@ const Editor = () => {
         el.classList.remove("lineActive");
       }
     });
-  }, [lineStatus, []]);
+  }, [lineStatus, editorTheme, []]);
 
   //theme dropdown db
 
@@ -140,27 +140,23 @@ const Editor = () => {
               selectedKeys={selected}
               onSelectionChange={setSelected}
             >
-                           
-
-
               {/*  */}
-              
+
               {(item) => (
                 <Dropdown.Item key={item.key}>
-                  <Button onPress={() => {
-                    setEditorTheme(item.mainword)
-                    console.log(item.mainword)
-                  }}
-                  light
-                  color="secondary"
-                  auto>{item.name}</Button>
+                  <Button
+                    onPress={() => {
+                      setEditorTheme(item.mainword);
+                      console.log(item.mainword);
+                    }}
+                    light
+                    color="secondary"
+                    auto
+                  >
+                    {item.name}
+                  </Button>
                 </Dropdown.Item>
               )}
-
-
-
-
-
             </Dropdown.Menu>
             {/* githubLight
 tokyoNight
@@ -174,35 +170,49 @@ aura
 abcdef */}
           </Dropdown>
 
-          
-
           {/*  */}
         </Navbar.Content>
 
         <Navbar.Content>
-          <Popover placement="bottom-right" >
+          <Popover placement="bottom-right">
             <Popover.Trigger>
               <Button auto flat color="secondary">
                 <Icon.Settings></Icon.Settings>
               </Button>
             </Popover.Trigger>
 
+            <Popover.Content className="px-4 pr-8 flex justify-end items-end py-4 gap-2 w-max">
+              <Radio.Group
+                className="text-sm flex items-start"
+                orientation="vertical"
+                label="Padding"
+                value={checked}
+                onChange={setChecked}
+                defaultValue="8"
+                size="xs"
+              >
+                <Radio value="8">8</Radio>
+                <Radio value="16">16</Radio>
+                <Radio value="24">24</Radio>
+                <Radio value="32">32</Radio>
+              </Radio.Group>
 
-            <Popover.Content className="pl-6 pr-6 flex justify-end items-end py-4 w-max">
-			<Radio.Group
-            className="text-sm flex items-end"
-            orientation="vertical"
-            label="Padding"
-            value={checked}
-            onChange={setChecked}
-            defaultValue="8"
-            size="xs"
-          >
-            <Radio value="8">8</Radio>
-            <Radio value="16">16</Radio>
-            <Radio value="24">24</Radio>
-            <Radio value="32">32</Radio>
-          </Radio.Group>
+<hr className="my-2"/>
+              <Radio.Group
+                className="text-sm flex  items-start"
+                orientation="vertical"
+                label="Theme"
+                value={bgGradientTheme}
+                onChange={setbgGradientTheme}
+                defaultValue="aqua"
+                size="xs"
+              >
+                <Radio value="aqua">Aqua</Radio>
+                <Radio value="modern">Modern</Radio>
+                
+              </Radio.Group>
+
+
             </Popover.Content>
           </Popover>
 
@@ -221,17 +231,17 @@ abcdef */}
       </Navbar>
 
       <div
-        className={`border-black flex flex-col items-center p-10 justify-center rounded-lg p-${checked} w-min gradient-cover-one max-w-full  overflow-auto`}
+        className={`border-black flex flex-col items-center p-10 justify-center rounded-lg p-${checked} w-min gradient-${bgGradientTheme} max-w-full  overflow-auto`}
         id="capture"
         ref={exportContent}
       >
-        <div className="w-full h-8 rounded-t-lg navtitle flex items-center px-2 relative">
+        <div className="w-full  h-8 rounded-t-lg navtitle flex items-center px-2 relative">
           <div className="buttons-title flex items-center gap-1 ">
-          <div className="h-2 w-2 bg-gray-200 opacity-20  rounded-full"></div>
-          <div className="h-2 w-2 bg-gray-200 opacity-20   rounded-full"></div>
-          <div className="h-2 w-2 bg-gray-200 opacity-20   rounded-full"></div>
+            <div className="h-2.5 w-2.5 bg-gray-200 opacity-20  rounded-full"></div>
+            <div className="h-2.5 w-2.5 bg-gray-200 opacity-20   rounded-full"></div>
+            <div className="h-2.5 w-2.5 bg-gray-200 opacity-20   rounded-full"></div>
           </div>
-          <p contentEditable spellCheck="false" className="text-white opacity-40 text-xs text-center outline-none absolute w-full jetbrain">Untitled.code</p>
+          {/* <p contentEditable spellCheck="false" className="text-white opacity-40 text-xs text-center outline-none absolute w-full jetbrain">Untitled.code</p> */}
         </div>
         <CodeMirror
           className={`editor-box outline-none select-none w-max  max-h-fit text-xs max-w-full  `}
