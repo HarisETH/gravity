@@ -72,7 +72,7 @@ const Editor = () => {
   const [namer,setNamer] = useState('Github Dark')
   // const [themer, setThemer] = useState(githubDark);
   // Dropdown Array
-  const [checked, setChecked] = useState("8");
+  const [checked, setChecked] = useState("4");
   const [bgGradientTheme, setbgGradientTheme] = useState("modern");
 
 
@@ -144,120 +144,9 @@ const Editor = () => {
 
   return (
     <section className="w-full px-4 flex flex-col gap-4 justify-center items-center py-20">
-      <Navbar isBordered variant="floating" className="w-full">
-        <Navbar.Content hideIn="xs" variant="highlight-rounded">
-          <p className="text-sm self-center font-medium text-purple-600 jetbrain mr-2">
-            Lines
-          </p>
-          <Switch
-            size="xs"
-            onChange={() => setLineStatus(!lineStatus)}
-            className="text-white text-base shadow-lg"
-            label="Lines"
-            shadow
-            color="secondary"
-          ></Switch>
+      
 
-          <Dropdown>
-            {/* 1 */}
-            <Dropdown.Button
-              flat
-              color="secondary"
-              css={{ tt: "capitalize" }}
-              className="bg-transparent"
-            >
-              {selectedValue}
-            </Dropdown.Button>
-
-            {/* 2 */}
-            <Dropdown.Menu
-              aria-label="Single selection actions"
-              color="secondary"
-              disallowEmptySelection
-              selectionMode="single"
-              items={menuItems}
-              selectedKeys={selected}
-              onSelectionChange={setSelected}
-            >
-              {/*  */}
-
-              {(item) => (
-                <Dropdown.Item key={item.key}>
-                  <Button
-                    onPress={() => {
-                      setEditorTheme(item.mainword);
-                      console.log(item.mainword);
-                    }}
-                    light
-                    color="secondary"
-                    auto
-                  >
-                    {item.name}
-                  </Button>
-                </Dropdown.Item>
-              )}
-            </Dropdown.Menu>
-            
-          </Dropdown>
-
-          {/*  */}
-        </Navbar.Content>
-
-        <Navbar.Content>
-          <Popover placement="bottom-right">
-            <Popover.Trigger>
-              <Button auto flat color="secondary">
-                <Icon.Settings></Icon.Settings>
-              </Button>
-            </Popover.Trigger>
-
-            <Popover.Content className="px-4 pr-8 flex justify-end items-end py-4 gap-2 w-max">
-              <Radio.Group
-                className="text-sm flex items-start"
-                orientation="vertical"
-                label="Padding"
-                value={checked}
-                onChange={setChecked}
-                defaultValue="8"
-                size="xs"
-              >
-                <Radio value="8">8</Radio>
-                <Radio value="16">16</Radio>
-                <Radio value="24">24</Radio>
-                <Radio value="32">32</Radio>
-              </Radio.Group>
-
-              <hr className="my-2" />
-              <Radio.Group
-                className="text-sm flex  items-start"
-                orientation="vertical"
-                label="Theme"
-                value={bgGradientTheme}
-                onChange={setbgGradientTheme}
-                defaultValue="aqua"
-                size="xs"
-              >
-                <Radio value="aqua">Aqua</Radio>
-                <Radio value="modern">Modern</Radio>
-              </Radio.Group>
-            </Popover.Content>
-          </Popover>
-
-          <Navbar.Item className="p-0 w-fit">
-            <Button
-              onPress={handleClick}
-              className="bg-purple-600 p-0.5 px-4"
-              shadow
-              color="secondary"
-              auto
-            >
-              Export
-            </Button>
-          </Navbar.Item>
-        </Navbar.Content>
-      </Navbar>
-
-      <Toolbar.Root className="w-3/4 justify-between items-center font-lexend bg-slate-50  border border-gray-200 gap-4 dark:bg-gray-800 dark:border-gray-700 blur-md bg-opacity-60  rounded-md flex p-3 ">
+      <Toolbar.Root className="w-5/6 justify-between items-center font-lexend bg-slate-50  border border-gray-200 gap-4 dark:bg-gray-800 dark:border-gray-700 blur-md bg-opacity-60  rounded-md flex py-3 px-6 ">
         <div className="flex gap-6 items-center">
         <div className="c1 flex items-center justify-center gap-1">
           <Checkbox.Root className="h-4 w-4 flex items-center justify-center rounded border bg-white">
@@ -351,16 +240,18 @@ const Editor = () => {
         <ToggleGroup.Root
           className="inline-flex bg-mauve6 rounded  space-x-px"
           type="single"
-          defaultValue="center"
+          defaultValue="8"
           aria-label="Text alignment"
           value={values}
           onValueChange={(values) => {
             if (values) setValues(values);
           }}
+          onChange={setChecked}
+
         >
           <ToggleGroup.Item
             className={`${toggleGroupItemClasses} text-[11px] `}
-            value="left"
+            value="4"
             aria-label="Left aligned"
           >
             4
@@ -368,7 +259,7 @@ const Editor = () => {
 
           <ToggleGroup.Item
             className={`${toggleGroupItemClasses} text-[11px]  `}
-            value="center"
+            value="8"
             aria-label="Center aligned"
           >
             8
@@ -376,7 +267,7 @@ const Editor = () => {
 
           <ToggleGroup.Item
             className={`${toggleGroupItemClasses} text-[11px]  `}
-            value="right"
+            value="12"
             aria-label="Right aligned"
           >
             12
@@ -384,7 +275,7 @@ const Editor = () => {
 
           <ToggleGroup.Item
             className={`${toggleGroupItemClasses} text-[11px] `}
-            value="right-most"
+            value="16"
             aria-label="Right aligned"
           >
             16
@@ -402,11 +293,11 @@ const Editor = () => {
       </Toolbar.Root>
 
       <div
-        className={`border-black flex flex-col items-center p-10 justify-center rounded-lg p-${checked}  overflow-hidden font-fira  w-min gradient-${bgGradientTheme} max-w-full  overflow-auto`}
+        className={`border-black flex flex-col items-center p-10 justify-center rounded-lg p-${values}   overflow-hidden font-fira  w-min gradient-${bgGradientTheme} max-w-full lg:max-w-4xl  overflow-auto`}
         id="capture"
         ref={exportContent}
       >
-        <div className={`w-full  h-8 rounded-t-lg navtitle  flex items-center px-2 relative ${navLight}`}>
+        <div className={`w-full h-8 rounded-t-lg navtitle  flex items-center px-2 relative ${navLight}`}>
           <div className="buttons-title flex items-center gap-1 ">
             <div className={`h-2.5 w-2.5 ${navbtns} opacity-20  rounded-full`}></div>
             <div className={`h-2.5 w-2.5 ${navbtns} opacity-20  rounded-full`}></div>

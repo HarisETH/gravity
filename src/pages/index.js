@@ -37,7 +37,7 @@ export default function Home() {
         <Editor />
 
 
-        <div className="absolute bottom-6 right-6 ">
+        <div className="absolute bottom-6 right-6 p-12 px-0 py-0">
         <a href="https://github.com/hariseth/gravity"  type="button" class="font-lexend text-white border-none bg-gradient-to-r from-green-400 via-green-500 to-green-600 cursor-pointer hover:bg-gradient-to-br font-medium rounded-lg text-xs px-5 py-2.5 text-center mr-2 mb-2 flex items-center justify-between gap-1.5 leading-none"> <GitHubLogoIcon/> Star on Github</a>
         </div>
 

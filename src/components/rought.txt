@@ -1,109 +1,112 @@
-<Dropdown.Item key="Github Dark">
-                <Button
-                  onPress={() => setEditorTheme(githubDark)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Github Dark{" "}
-                </Button>
-              </Dropdown.Item>
+<Navbar isBordered variant="floating" className="w-full">
+        <Navbar.Content hideIn="xs" variant="highlight-rounded">
+          <p className="text-sm self-center font-medium text-purple-600 jetbrain mr-2">
+            Lines
+          </p>
+          <Switch
+            size="xs"
+            onChange={() => setLineStatus(!lineStatus)}
+            className="text-white text-base shadow-lg"
+            label="Lines"
+            shadow
+            color="secondary"
+          ></Switch>
+
+          <Dropdown>
+            {/* 1 */}
+            <Dropdown.Button
+              flat
+              color="secondary"
+              css={{ tt: "capitalize" }}
+              className="bg-transparent"
+            >
+              {selectedValue}
+            </Dropdown.Button>
+
+            {/* 2 */}
+            <Dropdown.Menu
+              aria-label="Single selection actions"
+              color="secondary"
+              disallowEmptySelection
+              selectionMode="single"
+              items={menuItems}
+              selectedKeys={selected}
+              onSelectionChange={setSelected}
+            >
               {/*  */}
 
-              <Dropdown.Item key="dracula">
-                <Button
-                  onPress={() => setEditorTheme(dracula)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Dracula{" "}
-                </Button>
-              </Dropdown.Item>
+              {(item) => (
+                <Dropdown.Item key={item.key}>
+                  <Button
+                    onPress={() => {
+                      setEditorTheme(item.mainword);
+                      console.log(item.mainword);
+                    }}
+                    light
+                    color="secondary"
+                    auto
+                  >
+                    {item.name}
+                  </Button>
+                </Dropdown.Item>
+              )}
+            </Dropdown.Menu>
+            
+          </Dropdown>
 
-              <Dropdown.Item key="Tokyo Night">
-                <Button
-                  onPress={() => setEditorTheme(tokyoNight)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Tokyo Night{" "}
-                </Button>
-              </Dropdown.Item>
+          {/*  */}
+        </Navbar.Content>
 
-              <Dropdown.Item key="Github Light">
-                <Button
-                  onPress={() => setEditorTheme(githubLight)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Github Light{" "}
-                </Button>
-              </Dropdown.Item>
+        <Navbar.Content>
+          <Popover placement="bottom-right">
+            <Popover.Trigger>
+              <Button auto flat color="secondary">
+                <Icon.Settings></Icon.Settings>
+              </Button>
+            </Popover.Trigger>
 
-              <Dropdown.Item key="nord">
-                <Button
-                  onPress={() => setEditorTheme(nord)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  nord{" "}
-                </Button>
-              </Dropdown.Item>
+            <Popover.Content className="px-4 pr-8 flex justify-end items-end py-4 gap-2 w-max">
+              <Radio.Group
+                className="text-sm flex items-start"
+                orientation="vertical"
+                label="Padding"
+                value={checked}
+                onChange={setChecked}
+                defaultValue="8"
+                size="xs"
+              >
+                <Radio value="8">8</Radio>
+                <Radio value="16">16</Radio>
+                <Radio value="24">24</Radio>
+                <Radio value="32">32</Radio>
+              </Radio.Group>
 
-              <Dropdown.Item key="duotone">
-                <Button
-                  onPress={() => setEditorTheme(duotone)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  duotone{" "}
-                </Button>
-              </Dropdown.Item>
+              <hr className="my-2" />
+              <Radio.Group
+                className="text-sm flex  items-start"
+                orientation="vertical"
+                label="Theme"
+                value={bgGradientTheme}
+                onChange={setbgGradientTheme}
+                defaultValue="aqua"
+                size="xs"
+              >
+                <Radio value="aqua">Aqua</Radio>
+                <Radio value="modern">Modern</Radio>
+              </Radio.Group>
+            </Popover.Content>
+          </Popover>
 
-              <Dropdown.Item key="sublime">
-                <Button
-                  onPress={() => setEditorTheme(sublime)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  sublime{" "}
-                </Button>
-              </Dropdown.Item>
-
-              <Dropdown.Item key="androidstudio">
-                <Button
-                  onPress={() => setEditorTheme(androidstudio)}
-                  light
-                  color="secondary"
-                  auto
-                >
-androidstudio                </Button>
-              </Dropdown.Item>
-              
-              <Dropdown.Item key="ABCDEF">
-                <Button
-                  onPress={() => setEditorTheme(abcdef)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  ABCDEF{" "}
-                </Button>
-              </Dropdown.Item>
-              
-              <Dropdown.Item key="Aura">
-                <Button
-                  onPress={() => setEditorTheme(aura)}
-                  light
-                  color="secondary"
-                  auto
-                >
-                  Aura{" "}
-                </Button>
-              </Dropdown.Item>
+          <Navbar.Item className="p-0 w-fit">
+            <Button
+              onPress={handleClick}
+              className="bg-purple-600 p-0.5 px-4"
+              shadow
+              color="secondary"
+              auto
+            >
+              Export
+            </Button>
+          </Navbar.Item>
+        </Navbar.Content>
+      </Navbar>
