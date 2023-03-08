@@ -307,7 +307,11 @@ const Editor = () => {
         </div>
         <CodeMirror
           className={`editor-box outline-none select-none w-max  max-h-fit text-xs max-w-full  `}
-          value="console.log('hello world!');"
+          value="const Gravity = 'gravity.io.day'
+          Meet Gravity at ${Gravity}
+          
+          
+          Built with 💗 and ⚡ by @hariskumar_eth"
           extensions={[javascript({ jsx: true }), EditorView.lineWrapping]}
           theme={editorTheme}
           lineWrapping={true}
