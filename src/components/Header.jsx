@@ -5,10 +5,9 @@ import { Button, Spacer } from "@nextui-org/react";
 
 const Header = () => {
   return (
-    <div className='py-10 flex flex-col items-center gap-4'>
-        <h1 className='text-6xl font-bold text-white tracking-tighter text-gradient'>Gravity</h1>
-<GitHubButton className="p-16 p-24 p-32" href="https://github.com/hariseth/gravity" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star hariseth/gravity on GitHub">Star</GitHubButton>
-
+    <div className='py-10 flex flex-col items-center gap-2'>
+        <h1 className='text-6xl font-lexend font-bold text-white tracking-wide text-gradient'>Gravity</h1>
+<p className='text-slate-50 opacity-60 font-lexend tracking-normal'>A light-weight Code formatter just for YOU</p>
     </div>
   )
 }

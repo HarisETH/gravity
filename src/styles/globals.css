@@ -1,99 +1,110 @@
 /* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
-*, .jetbrain{
-    font-family: 'Jetbrains Mono', monospace;
+.jetbrin {
+  font-family: "Jetbrains Mono", monospace;
 }
-#capture{
-    min-width: 240px !important;
+.font-lexend {
+  font-family: "Lexend", sans-serif;
+  
+   /* font-family: 'Fira Code', monospace; */
 }
-div.cm-gutters{
-    background-color: transparent !important;
+#capture {
+  min-width: 240px !important;
 }
-.cm-gutter.cm-lineNumbers{
-    display: none !important;
-    background-color: transparent !important;
+div.cm-gutters {
+  background-color: transparent !important;
 }
-div.cm-activeLine{
-    background-color: transparent !important;
+.cm-gutter.cm-lineNumbers {
+  display: none !important;
+  background-color: transparent !important;
 }
-.cm-gutter.cm-lineNumbers.lineActive{
-    display: flex !important;
-    background-color: transparent !important;
-
+div.cm-activeLine {
+  background-color: transparent !important;
 }
-.cm-content{
-    opacity: 1 !important;
+.cm-gutter.cm-lineNumbers.lineActive {
+  display: flex !important;
+  background-color: transparent !important;
 }
-
-.cm-activeLineGutter{
-    background-color: transparent;
-}
-.cm-gutter.cm-foldGutter{
-    display: none !important;
-}
-.cm-activeLineGutter{
-    background-color: transparent !important;
+.cm-content {
+  opacity: 1 !important;
 }
 
-
-.editorExportClass{
-    border-radius: 10px  !important;
+.cm-activeLineGutter {
+  background-color: transparent;
 }
-.navtitle{
-    background: rgba( 21, 17, 17, 0.69 );
-
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+.cm-gutter.cm-foldGutter {
+  display: none !important;
 }
-.cm-editor{
-    border-radius: 0 0 10px 10px !important;
-    padding: 20px;
-    /* caret-color: transparent !important; */
-    outline: none !important;
-    /* min-width: 80px; */
-    cursor: text !important;
-    pointer-events:visible;
-    word-wrap: break-word !important;
-    white-space: pre-wrap !important;
-    word-break: break-word !important;
-    width: fit-content;
-    /* background-color: aquamarine ; */
-    /* background: rgba( 21, 17, 17, 0.69 ); */
-
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-   
-    
-}
-.cm-gutters{
-    border: 0 !important ;
-    margin-right: 5px;
-}
-.cm-gutterElement{
-    padding: 0 2px !important;
-    text-align: center !important;
-    width: 100%;
-}
-.cm-line{
-    word-break: break-all !important;
-    word-wrap: break-word !important;
-    overflow: visible !important;
-    opacity: 1 !important;
-    padding: 0 2px !important;
+.cm-activeLineGutter {
+  background-color: transparent !important;
 }
 
-.cm-scroller{
-    overflow-x: hidden !important;
-    /* white-space: pre-wrap !important; */
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
+.editorExportClass {
+  border-radius: 10px !important;
+}
+.navtitle {
+  background: rgba(21, 17, 17, 0.69);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.navtitle.light {
+  background: rgba( 255, 255, 255, 0.6 );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.cm-editor {
+  border-radius: 0 0 10px 10px !important;
+  padding: 20px;
+  /* caret-color: transparent !important; */
+  outline: none !important;
+  /* min-width: 80px; */
+  cursor: text !important;
+  pointer-events: visible;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  width: fit-content;
+  font-family: 'Fira Code', monospace !important;
+  /* background-color: aquamarine ; */
+  /* background: rgba( 21, 17, 17, 0.69 ); */
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.cm-gutters {
+  border: 0 !important ;
+  margin-right: 5px;
+}
+.cm-gutterElement {
+  padding: 0 2px !important;
+  text-align: center !important;
+  width: 100%;
+}
+.cm-line {
+  word-break: break-all !important;
+  word-wrap: break-word !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  padding: 0 2px !important;
+  min-width: 120px;
+  font-family: "Fira Code", monospace !important;
+}
+
+.cm-scroller {
+  overflow-x: hidden !important;
+  /* white-space: pre-wrap !important; */
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 /* ::-webkit-resizer {
@@ -108,57 +119,673 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 50px !important;
     height: 100px !important;
 } */
-
-
-.text-gradient{
-    background: hsla(4, 93%, 67%, 1);
-
-    background: linear-gradient(150deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
-    
-    background: -moz-linear-gradient(150deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
-    
-    background: -webkit-linear-gradient(150deg, hsla(4, 93%, 67%, 1) 0%, hsla(29, 86%, 52%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9655B", endColorstr="#EE821A", GradientType=1 );
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
+.cm-selectionMatch {
+  background: transparent !important;
 }
+
+/* .text-gradient {
+  background: hsla(4, 93%, 67%, 1);
+
+  background: linear-gradient(
+    150deg,
+    hsla(4, 93%, 67%, 1) 0%,
+    hsla(29, 86%, 52%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    150deg,
+    hsla(4, 93%, 67%, 1) 0%,
+    hsla(29, 86%, 52%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    150deg,
+    hsla(4, 93%, 67%, 1) 0%,
+    hsla(29, 86%, 52%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9655B", endColorstr="#EE821A", GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
 
 .gradient-background {
-    background: hsla(4, 48%, 94%, 1);
+  background: #202020;
+/* 
+  background: linear-gradient(
+    60deg,
+    hsla(4, 48%, 94%, 1) 0%,
+    hsla(66, 70%, 80%, 1) 50%,
+    hsla(226, 67%, 76%, 1) 100%
+  );
 
-    background: linear-gradient(60deg, hsla(4, 48%, 94%, 1) 0%, hsla(66, 70%, 80%, 1) 50%, hsla(226, 67%, 76%, 1) 100%);
-    
-    background: -moz-linear-gradient(60deg, hsla(4, 48%, 94%, 1) 0%, hsla(66, 70%, 80%, 1) 50%, hsla(226, 67%, 76%, 1) 100%);
-    
-    background: -webkit-linear-gradient(60deg, hsla(4, 48%, 94%, 1) 0%, hsla(66, 70%, 80%, 1) 50%, hsla(226, 67%, 76%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7E9E8", endColorstr="#E9F0AA", GradientType=1 );
-  }
-  
+  background: -moz-linear-gradient(
+    60deg,
+    hsla(4, 48%, 94%, 1) 0%,
+    hsla(66, 70%, 80%, 1) 50%,
+    hsla(226, 67%, 76%, 1) 100%
+  );
 
+  background: -webkit-linear-gradient(
+    60deg,
+    hsla(4, 48%, 94%, 1) 0%,
+    hsla(66, 70%, 80%, 1) 50%,
+    hsla(226, 67%, 76%, 1) 100%
+  ); */
 
-.gradient-modern{
-    background: hsla(39, 51%, 85%, 1);
-
-background: linear-gradient(45deg, hsla(39, 51%, 85%, 1) 0%, hsla(182, 93%, 68%, 1) 50%, hsla(318, 79%, 79%, 1) 100%);
-
-background: -moz-linear-gradient(45deg, hsla(39, 51%, 85%, 1) 0%, hsla(182, 93%, 68%, 1) 50%, hsla(318, 79%, 79%, 1) 100%);
-
-background: -webkit-linear-gradient(45deg, hsla(39, 51%, 85%, 1) 0%, hsla(182, 93%, 68%, 1) 50%, hsla(318, 79%, 79%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ECDEC4", endColorstr="#62F4F9", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7E9E8", endColorstr="#E9F0AA", GradientType=1 );
 }
 
-.gradient-aqua{
-    background: hsla(280, 95%, 57%, 1);
+.gradient-modern {
+  background: hsla(39, 51%, 85%, 1);
 
-background: linear-gradient(45deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+  background: linear-gradient(
+    45deg,
+    hsla(39, 51%, 85%, 1) 0%,
+    hsla(182, 93%, 68%, 1) 50%,
+    hsla(318, 79%, 79%, 1) 100%
+  );
 
-background: -moz-linear-gradient(45deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(39, 51%, 85%, 1) 0%,
+    hsla(182, 93%, 68%, 1) 50%,
+    hsla(318, 79%, 79%, 1) 100%
+  );
 
-background: -webkit-linear-gradient(45deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%);
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(39, 51%, 85%, 1) 0%,
+    hsla(182, 93%, 68%, 1) 50%,
+    hsla(318, 79%, 79%, 1) 100%
+  );
 
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B429F9", endColorstr="#26C5F3", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ECDEC4", endColorstr="#62F4F9", GradientType=1 );
+}
+
+.gradient-aqua {
+  background: hsla(280, 95%, 57%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(280, 95%, 57%, 1) 0%,
+    hsla(193, 90%, 55%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(280, 95%, 57%, 1) 0%,
+    hsla(193, 90%, 55%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(280, 95%, 57%, 1) 0%,
+    hsla(193, 90%, 55%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B429F9", endColorstr="#26C5F3", GradientType=1 );
+}
+
+.SelectMenuWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.SelectTrigger {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  height: 35px;
+  gap: 5px;
+  /* background-color: #ddd;
+    color: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1); */
+
+  /* margin: 7px 15px 0 15px; */
+
+  transition: background-color 0.2s ease;
+}
+
+.SelectTrigger:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.SelectTrigger:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.SelectContent {
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  background-color: rgba(40, 40, 40, 0.7);
+  -webkit-backdrop-filter: blur(60px) saturate(210%);
+  backdrop-filter: blur(60px) saturate(210%);
+
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 8px 40px rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+}
+
+.SelectViewport {
+  padding: 5px;
+}
+
+.SelectItem {
+  all: unset;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  /* color: black; */
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 35px 0 25px;
+  position: relative;
+  user-select: none;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.SelectItem[data-disabled] {
+  color: rgba(255, 255, 255, 0.33);
+  pointer-events: none;
+}
+
+.SelectItem:focus {
+  background-color: #275bca;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.SelectLabel {
+  padding: 5px 25px 0 11px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.33);
+  text-transform: uppercase;
+}
+
+.SelectSeparator {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 5px;
+}
+
+.SelectItemIndicator {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SelectScrollButtonStyles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: rgba(235, 235, 245, 0.03);
+  color: rgba(255, 255, 255, 0.33);
+  cursor: default;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+.box-glass {
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.font-fira{
+  font-family: 'Fira Code', monospace !important;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJV37Nv7g.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJVT7Nv7g.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJVz7Nv7g.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJVP7Nv7g.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJV77Nv7g.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/firacode/v21/uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_D1sJVD7Ng.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nYivN04w.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nRivN04w.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nWivN04w.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nbivN04w.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+.game-font {
+  /* font-family: 'Press Start 2P', cursive; */
+  font-family: "Fira Code", monospace;
+}
+.jetbrain {
+  font-family: "Fira Code", monospace;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9KQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v9aQU4Wc.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v17/wlpwgwvFAVdoq2_v-6QU.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }

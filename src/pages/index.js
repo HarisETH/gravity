@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 //API Imports
 import { Button, Spacer } from "@nextui-org/react";
 //CodeMirror
-
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import CodeMirror from "@uiw/react-codemirror";
 
 export default function Home() {
@@ -31,14 +31,14 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <main className="flex bg-gray-100 flex-col items-center justify-start gradient-background pt-16 min-h-screen w-full  ">
+      <main className="flex bg-gray-100 flex-col items-center justify-start gradient-background font-lexend pt-16 min-h-screen w-full  ">
         <Header />
 
         <Editor />
 
 
         <div className="absolute bottom-6 right-6 ">
-        
+        <a href="https://github.com/hariseth/gravity"  type="button" class="font-lexend text-white border-none bg-gradient-to-r from-green-400 via-green-500 to-green-600 cursor-pointer hover:bg-gradient-to-br font-medium rounded-lg text-xs px-5 py-2.5 text-center mr-2 mb-2 flex items-center justify-between gap-1.5 leading-none"> <GitHubLogoIcon/> Star on Github</a>
         </div>
 
       </main>
