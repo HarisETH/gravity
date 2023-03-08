@@ -143,10 +143,10 @@ const Editor = () => {
   //theme dropdown db
 
   return (
-    <section className="w-full px-4 flex flex-col gap-4 justify-center items-center py-20">
+    <section className="w-full px-4 flex h-full flex-col gap-4 justify-center items-center py-20">
       
 
-      <Toolbar.Root className="w-5/6 justify-between items-center font-lexend bg-slate-50  border border-gray-200 gap-4 dark:bg-gray-800 dark:border-gray-700 blur-md bg-opacity-60  rounded-md flex py-3 px-6 ">
+      <Toolbar.Root className="w-5/6 sticky top-10 z-50 justify-between items-center font-lexend bg-slate-50  border border-gray-200 gap-4 dark:bg-gray-800 dark:border-gray-700 blur-md bg-opacity-60  rounded-md flex py-3 px-6 ">
         <div className="flex gap-6 items-center">
         <div className="c1 flex items-center justify-center gap-1">
           <Checkbox.Root className="h-4 w-4 flex items-center justify-center rounded border bg-white">
@@ -293,7 +293,7 @@ const Editor = () => {
       </Toolbar.Root>
 
       <div
-        className={`border-black flex flex-col items-center p-10 justify-center rounded-lg p-${values}   overflow-hidden font-fira  w-min gradient-${bgGradientTheme} max-w-full lg:max-w-4xl  overflow-auto`}
+        className={`border-black self-center justify-self-center flex flex-col mt-24 items-center p-10 justify-center rounded-lg p-${values}   overflow-hidden font-fira  w-min gradient-${bgGradientTheme} max-w-full lg:max-w-4xl  overflow-auto`}
         id="capture"
         ref={exportContent}
       >
