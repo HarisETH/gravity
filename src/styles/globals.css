@@ -151,6 +151,8 @@ div.cm-activeLine {
 
 .gradient-background {
   background: #202020;
+  max-height: fit-content;
+  min-height: fit-content ;
 /* 
   background: linear-gradient(
     60deg,

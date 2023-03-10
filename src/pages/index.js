@@ -32,7 +32,7 @@ export default function Home() {
         ></link>
       </Head>
       <main className="flex bg-gray-100 flex-col items-center justify-start gradient-background font-lexend pt-16 min-h-screen w-full  ">
-        <Header />
+        {/* <Header /> */}
 
         <Editor  />
 

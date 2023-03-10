@@ -19,15 +19,16 @@ A sleek light code image exporter in just a click with many themes, languages bu
 Built by [Haris⚡]('https://www.haris.one')
 ## ➕️ Recent Commits
 
-- Added NEXTUI design system
-- Improved UI and Responsiveness in mobile devices
-- Added more¹⁰ editor themes
+- Added RadixUI design system
+- Improved UI 
+- Bugs were smashed
+- Padding Adjustment Option Added
 
 ## 🦄 Upcoming  Feature Updates
 
 - UI will be Improved
 - More theme and language support
-- Padding adjustment option
+- Aspect Ratio Adjustment option
 
 ## 🎉 Recent Milestones
 
