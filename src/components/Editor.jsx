@@ -364,47 +364,7 @@ const Editor = () => {
                       </ToggleGroup.Root>
                     </fieldset>
 
-                    <fieldset className="flex gap-5 items-center">
-                      <label
-                        className="text-[13px] text-violet11 w-[75px]"
-                        htmlFor="maxWidth"
-                      >
-                        Max. width
-                      </label>
-                      <input
-                        className="w-full inline-flex items-center justify-center flex-1 rounded px-2.5 text-[13px] leading-none text-violet11 shadow-[0_0_0_1px] shadow-violet7 h-[25px] focus:shadow-[0_0_0_2px] focus:shadow-violet8 outline-none"
-                        id="maxWidth"
-                        defaultValue="300px"
-                      />
-                    </fieldset>
-
-                    <fieldset className="flex gap-5 items-center">
-                      <label
-                        className="text-[13px] text-violet11 w-[75px]"
-                        htmlFor="height"
-                      >
-                        Height
-                      </label>
-                      <input
-                        className="w-full inline-flex items-center justify-center flex-1 rounded px-2.5 text-[13px] leading-none text-violet11 shadow-[0_0_0_1px] shadow-violet7 h-[25px] focus:shadow-[0_0_0_2px] focus:shadow-violet8 outline-none"
-                        id="height"
-                        defaultValue="25px"
-                      />
-                    </fieldset>
-
-                    <fieldset className="flex gap-5 items-center">
-                      <label
-                        className="text-[13px] text-violet11 w-[75px]"
-                        htmlFor="maxHeight"
-                      >
-                        Max. height
-                      </label>
-                      <input
-                        className="w-full inline-flex items-center justify-center flex-1 rounded px-2.5 text-[13px] leading-none text-violet11 shadow-[0_0_0_1px] shadow-violet7 h-[25px] focus:shadow-[0_0_0_2px] focus:shadow-violet8 outline-none"
-                        id="maxHeight"
-                        defaultValue="none"
-                      />
-                    </fieldset>
+                    
                   </div>
                   <Popover.Close
                     className="rounded-full h-[25px] w-[25px] inline-flex items-center justify-center text-violet11 absolute top-[5px] right-[5px] hover:bg-violet4 focus:shadow-[0_0_0_2px] focus:shadow-violet7 outline-none cursor-default"
