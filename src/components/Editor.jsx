@@ -146,12 +146,12 @@ const Editor = () => {
   //theme dropdown db
 
   return (
-    <section className="w-full px-4 flex min-h-screen flex-col gap-4 justify-start items-center ">
-      <div className="py-10 flex flex-col items-center gap-2 justify-self-center ">
-        <h1 className="text-6xl font-lexend font-bold text-white tracking-wide text-gradient">
+    <section className="w-full px-4 flex h-full flex-col gap-4 justify-center items-center min-h-max glassmorphism">
+      <div className="py-10 flex flex-col items-center  text-gray-800 gap-2 justify-self-start ">
+        <h1 className="text-6xl font-lexend font-bold tracking-wide text-gradient">
           Gravity
         </h1>
-        <p className="text-slate-50 opacity-60 font-lexend tracking-normal">
+        <p className=" opacity-60 font-lexend tracking-normal">
           A light-weight Code formatter just for YOU
         </p>
       </div>
@@ -172,6 +172,7 @@ const Editor = () => {
           <div className="div">
             <Select.Root
               defaultValue="Github_Dark"
+              
               value={value}
               onValueChange={(value) => {
                 setValuee(value.name);
@@ -198,7 +199,7 @@ const Editor = () => {
                 <Select.Viewport className="SelectViewport">
                   <Select.Group>
                     <Select.Label className="SelectLabel">
-                      Countries
+                      Themes
                     </Select.Label>
                     {/* {countriesArray.map((address) => (
                       <Select.Item value={address} className="SelectItem text-xl">
